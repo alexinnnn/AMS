@@ -32,7 +32,7 @@ AMS - Automatic management system
 [include mmu/*.cfg]
 [include mmu/base/*.cfg]
 2. В mmu/base/mmu_hardware.cfg настроить секции stepper_mmu_gear (и tmc2209 stepper_mmu_gear), stepper_mmu_selector (b tmc2209 stepper_mmu_selector) для моторов
-3. Проверить в вашем конфиге секцию filament_switch_sensor lkz для датчика филамента на голове. Она должна называться [filament_switch_sensor extruder_sensor].
+3. Проверить в вашем конфиге секцию filament_switch_sensor для датчика филамента на голове. Она должна называться [filament_switch_sensor extruder_sensor].
 4. В mmu/filament_management.cfg в секции [gcode_macro LOAD_FILAMENT] внести variable_length1 и variable_length2 - это расстояние для выгрузки филамента, можно настроить в процессе работы
 5. В mmu/macros.cfg в секции [gcode_macro _POWER_OFF_PRINTER] имзенить имя устройства "printer" на ваше, это макрос для автовыключения принтера (если это необходимо).
 6. В mmu/print_management.cfg проверить все макросы, особенно [START_PRINT] и [END_PRINT]. ИЗМЕНИТЬ КООРДИНАТЫ ПАРКОВКИ X490 Y497 НА ВАШИ!!!
