@@ -29,8 +29,11 @@ AMS - Automatic management system
 Настройка:
 
 1. В printer.cfg в конец добавить строки:
-[include mmu/*.cfg]
-[include mmu/base/*.cfg]
+
+[include mmu/\*.cfg]
+
+[include mmu/base/\*.cfg]
+
 2. В mmu/base/mmu_hardware.cfg настроить секции stepper_mmu_gear (и tmc2209 stepper_mmu_gear), stepper_mmu_selector (b tmc2209 stepper_mmu_selector) для моторов
 3. Проверить в вашем конфиге секцию filament_switch_sensor для датчика филамента на голове. Она должна называться [filament_switch_sensor extruder_sensor].
 4. В mmu/filament_management.cfg в секции [gcode_macro LOAD_FILAMENT] внести variable_length1 и variable_length2 - это расстояние для выгрузки филамента, можно настроить в процессе работы
