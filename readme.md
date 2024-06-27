@@ -47,13 +47,11 @@ AMS - Automatic management system
 
 Стартовый и конечный g-code в слайсере должен быть стандартный для клиппера:
 
-** Стартовый **
+Стартовый:
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
-***************
 
-** Конечный **
+Конечный:
 END_PRINT
-**************
 
 Вроде все. Мог что-то забыть.
 
