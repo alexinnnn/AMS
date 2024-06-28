@@ -53,6 +53,13 @@ START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_tempe
 Конечный:
 END_PRINT
 
+Для многоцветной печати в g-code выполняемый при смене прутка нужно вставить (OrcaSlicer):
+PARK
+UNLOAD_FILAMENT T=0
+T{next_extruder+1}
+LOAD_FILAMENT T={new_filament_temp} MOVECLEARAFTER=1
+RESTORE_GCODE_STATE name=PARK_STATE MOVE=1 MOVE_SPEED=700
+
 Вроде все. Мог что-то забыть.
 
 PS Вся эта сборка предоставляется AS IS (КАК ЕСТЬ). ПОЛНОСТЬЮ под вашу ответственность и тд и тп.
